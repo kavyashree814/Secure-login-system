@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container dashboard">
+
+    <h1>Welcome, {{ username }}!</h1>
+
+    <p class="subtitle">
+        You are successfully logged in.
+    </p>
+
+    <div class="dashboard-card">
+
+        <h2>Secure Dashboard</h2>
+
+        <p>
+            Your account is protected using:
+        </p>
+
+        <ul>
+            <li>Hashed passwords</li>
+            <li>SQLite database</li>
+            <li>Secure session management</li>
+            <li>Input validation</li>
+            <li>Parameterized SQL queries</li>
+        </ul>
+
+    </div>
+
+    <a href="{{ url_for('logout') }}"
+       class="logout-button">
+        Logout
+    </a>
+
+</div>
+
+</body>
+</html>
